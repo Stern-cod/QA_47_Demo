@@ -22,6 +22,7 @@ public class Exceptions {
             System.out.println("create exception");
         }
         System.out.println("program is working");
+
     }
 
     private static void pause() throws InterruptedException {
