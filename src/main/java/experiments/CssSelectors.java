@@ -7,12 +7,13 @@ import org.openqa.selenium.WebElement;
 import org.openqa.selenium.chrome.ChromeDriver;
 import org.testng.annotations.Test;
 
-public class CcsSelectors {
+public class CssSelectors {
     WebDriver driver = new ChromeDriver();
 
     @Test
     public void selectorsHomePage() {
         driver.get("https://demoqa.com/");
+        //driver.navigate().to("https://demoqa.com/");
         driver.manage().window().maximize();
         hideBanner();
         hideFooter();
@@ -29,8 +30,10 @@ public class CcsSelectors {
         WebElement radioButton = driver.findElement(By.id("item-2"));
         radioButton.click();
         //WebElement radioButtonYes = driver.findElement(By.id("yesRadio"));
+//        WebElement radioButtonYes = driver.findElement(By
+//                .cssSelector("label[for='yesRadio']"));
         WebElement radioButtonYes = driver.findElement(By
-                .cssSelector("label[for='yesRadio']"));
+               .xpath("//label[@for='yesRadio']"));
         radioButtonYes.click();
         pause(5);
         driver.navigate().back();
@@ -48,6 +51,7 @@ public class CcsSelectors {
 
         pause(5);
         //driver.quit();
+        //driver.close();
 
     }
 
