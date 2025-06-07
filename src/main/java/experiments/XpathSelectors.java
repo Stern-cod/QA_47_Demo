@@ -45,15 +45,19 @@ public class XpathSelectors {
         WebElement inputEmail = driver.findElement(By
                 .xpath("//input[@placeholder='name@example.com']"));
         inputEmail.sendKeys("monkey@gmail.com");
+
         WebElement labelTextCurAdd = driver.findElement(By
                 .xpath("//label[text()='Current Address']"));
         System.out.println(labelTextCurAdd.getTagName());
+
         WebElement textAreaCurAdd = driver.findElement(By
                 .xpath("//textarea[@id='currentAddress']"));
         textAreaCurAdd.sendKeys("Monkey Street 4");
+
         WebElement textAreaPerAdd = driver.findElement(By
                 .xpath("//div[@id='permanentAddress-wrapper']//textarea"));
         textAreaPerAdd.sendKeys("Monkey avenue 9");
+
         WebElement btnSubmit = driver.findElement(By
                 .xpath("//button[text()='Submit']"));
         btnSubmit.click();

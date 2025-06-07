@@ -6,6 +6,6 @@ public class BasePage {
     static WebDriver driver;
 
     public static void setDriver(WebDriver driver) {
-        BasePage.driver = driver;
+         BasePage.driver = driver;
     }
 }

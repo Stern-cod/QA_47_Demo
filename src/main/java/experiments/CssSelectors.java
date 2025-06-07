@@ -46,7 +46,8 @@ public class CssSelectors {
         divBookStore.click();
         pause(5);
         driver.navigate().back();
-        WebElement divWidgets = driver.findElement(By.cssSelector("div[class='category-cards'] " +
+        WebElement divWidgets = driver.findElement(By.
+                cssSelector("div[class='category-cards'] " +
                 "div[class='card mt-4 top-card']:nth-child(4)"));
 
         pause(5);
@@ -66,14 +67,12 @@ public class CssSelectors {
     public void hideBanner() {
         JavascriptExecutor js = (JavascriptExecutor) driver;
         js.executeScript
-                ("document.querySelector('#fixedban')" +
-                        ".style.display='none'");
+                ("document.querySelector('#fixedban').style.display='none'");
     }
 
     public void hideFooter() {
         JavascriptExecutor js = (JavascriptExecutor) driver;
         js.executeScript
-                ("document.querySelector('footer')" +
-                        ".style.display='none'");
+                ("document.querySelector('footer').style.display='none'");
     }
 }

@@ -30,7 +30,6 @@ public class PrimerAjax extends BasePage{
         btnLogin.click();
         WebElement inputEmail = driver.findElement(By
                 .xpath("//input[@name='email']"));
-        //btnLogin.click();
         inputEmail.sendKeys("222222222");
     }
 
